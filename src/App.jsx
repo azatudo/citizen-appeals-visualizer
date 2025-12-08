@@ -19,14 +19,11 @@ import Pagination from "./components/Pagination";
 export default function App() {
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
-
   const [page, setPage] = useState(1);
   const itemsPerPage = 10;
-
   const [selectedId, setSelectedId] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalItem, setModalItem] = useState(null);
-
   const tableRefs = useRef({});
 
   useEffect(() => {
@@ -40,50 +37,30 @@ export default function App() {
 
   useEffect(() => {
     if (selectedId != null && tableRefs.current[selectedId]) {
-      tableRefs.current[selectedId].scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+      tableRefs.current[selectedId].scrollIntoView({ behavior: "smooth", block: "center" });
     }
   }, [selectedId]);
 
   const pageCount = Math.ceil(filteredItems.length / itemsPerPage);
-  const paginated = filteredItems.slice(
-    (page - 1) * itemsPerPage,
-    page * itemsPerPage
-  );
-
-  const handleMarkerClick = (item) => {
-    setModalItem(item);
-    setModalOpen(true);
-    setSelectedId(item.id);
-  };
+  const paginated = filteredItems.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
   const handleRowClick = (item) => {
     setSelectedId(item.id);
+    setModalItem(item);
+    setModalOpen(true);
+  };
+
+  const handleMarkerClick = (item) => {
+    setSelectedId(item.id);
+    setModalItem(item);
+    setModalOpen(true);
   };
 
   const handleCloseModal = () => setModalOpen(false);
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        height: "90vh",
-        gap: 2,
-        p: 2
-      }}
-    >
-      <Box
-        sx={{
-          flex: 1,
-          maxWidth: 450,
-          display: "flex",
-          flexDirection: "column",
-          gap: 2
-        }}
-      >
+    <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, height: "90vh", gap: 2, p: 2 }}>
+      <Box sx={{ flex: 1, maxWidth: 450, display: "flex", flexDirection: "column", gap: 2 }}>
         <Paper sx={{ p: 2 }}>
           <Filters
             data={items}
@@ -137,34 +114,18 @@ export default function App() {
       </Box>
 
       <Box sx={{ flex: 3, minHeight: 500 }}>
-        <MapView
-          items={filteredItems}
-          selectedId={selectedId}
-          onMarkerClick={handleMarkerClick}
-        />
+        <MapView items={filteredItems} selectedId={selectedId} onMarkerClick={handleMarkerClick} />
       </Box>
 
       <Modal open={modalOpen} onClose={handleCloseModal}>
-        <Paper
-          sx={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: 400,
-            p: 4
-          }}
-        >
+        <Paper sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: 400, p: 4 }}>
           {modalItem && (
             <>
-              <Typography variant="h6">
-                #{modalItem.id} — {modalItem.category}
-              </Typography>
-              <Typography sx={{ mb: 2 }}>{modalItem.address}</Typography>
-              <Typography sx={{ mb: 2 }}>{modalItem.description}</Typography>
-              <Button variant="contained" onClick={handleCloseModal}>
-                Закрыть
-              </Button>
+              <Typography variant="h6">#{modalItem.id} — {modalItem.category}</Typography>
+              <Typography sx={{ mb: 1 }}><strong>Адрес:</strong> {modalItem.address}</Typography>
+              <Typography sx={{ mb: 1 }}><strong>Описание:</strong> {modalItem.description || "Отсутствует"}</Typography>
+              <Typography sx={{ mb: 1 }}><strong>Координаты:</strong> {modalItem.latitude}, {modalItem.longitude}</Typography>
+              <Button variant="contained" onClick={handleCloseModal}>Закрыть</Button>
             </>
           )}
         </Paper>
