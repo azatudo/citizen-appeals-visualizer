@@ -31,5 +31,215 @@
     "latitude": 53.2180,
     "longitude": 63.6220,
     "photo": ""
+  },
+
+  {
+    "id": 104,
+    "category": "Вывоз мусора",
+    "address": "ул. Байтурсынова, 77",
+    "status": "В работе",
+    "created_at": "2025-11-02",
+    "description": "Контейнеры переполнены",
+    "latitude": 53.2251,
+    "longitude": 63.6217,
+    "photo": ""
+  },
+  {
+    "id": 105,
+    "category": "Бродячие животные",
+    "address": "ул. Тарана, 15",
+    "status": "В работе",
+    "created_at": "2025-10-26",
+    "description": "Стая собак у подъезда",
+    "latitude": 53.2102,
+    "longitude": 63.6301,
+    "photo": ""
+  },
+  {
+    "id": 106,
+    "category": "Освещение улиц",
+    "address": "ул. Чехова, 9",
+    "status": "Отклонено",
+    "created_at": "2025-10-22",
+    "description": "Фонари мигают каждую ночь",
+    "latitude": 53.2147,
+    "longitude": 63.6249,
+    "photo": ""
+  },
+  {
+    "id": 107,
+    "category": "Дорожное покрытие",
+    "address": "пр. Аль-Фараби, 53",
+    "status": "Решено",
+    "created_at": "2025-10-18",
+    "description": "Разбита обочина, невозможно нормально ехать",
+    "latitude": 53.2175,
+    "longitude": 63.6182,
+    "photo": ""
+  },
+  {
+    "id": 108,
+    "category": "Вывоз мусора",
+    "address": "ул. Майлина, 101",
+    "status": "В работе",
+    "created_at": "2025-11-03",
+    "description": "Запах от контейнеров",
+    "latitude": 53.2219,
+    "longitude": 63.6261,
+    "photo": ""
+  },
+  {
+    "id": 109,
+    "category": "Общественный транспорт",
+    "address": "ул. Амангельды, 12",
+    "status": "Отклонено",
+    "created_at": "2025-10-19",
+    "description": "Автобусы приходят нерегулярно",
+    "latitude": 53.2098,
+    "longitude": 63.6188,
+    "photo": ""
+  },
+  {
+    "id": 110,
+    "category": "Озеленение",
+    "address": "ул. Карбышева, 20",
+    "status": "Решено",
+    "created_at": "2025-10-12",
+    "description": "Сухие деревья требуют замены",
+    "latitude": 53.2114,
+    "longitude": 63.6342,
+    "photo": ""
+  },
+  {
+    "id": 111,
+    "category": "Дворовые территории",
+    "address": "ул. Гоголя, 5",
+    "status": "В работе",
+    "created_at": "2025-11-04",
+    "description": "Разрушена детская площадка",
+    "latitude": 53.2231,
+    "longitude": 63.6291,
+    "photo": ""
+  },
+  {
+    "id": 112,
+    "category": "Освещение улиц",
+    "address": "ул. Лермонтова, 14",
+    "status": "Решено",
+    "created_at": "2025-10-10",
+    "description": "Установили новые светильники",
+    "latitude": 53.2142,
+    "longitude": 63.6321,
+    "photo": ""
+  },
+  {
+    "id": 113,
+    "category": "Водоотведение",
+    "address": "ул. Кобланды батыра, 29",
+    "status": "В работе",
+    "created_at": "2025-11-05",
+    "description": "Лужи после дождя не уходят",
+    "latitude": 53.2167,
+    "longitude": 63.6197,
+    "photo": ""
+  },
+  {
+    "id": 114,
+    "category": "Дорожное покрытие",
+    "address": "ул. Назарбаева, 18",
+    "status": "Отклонено",
+    "created_at": "2025-10-20",
+    "description": "Трещины на асфальте",
+    "latitude": 53.2121,
+    "longitude": 63.6278,
+    "photo": ""
+  },
+  {
+    "id": 115,
+    "category": "Вывоз мусора",
+    "address": "ул. Кабанбай батыр, 31",
+    "status": "Решено",
+    "created_at": "2025-09-30",
+    "description": "Контейнер заменили",
+    "latitude": 53.2188,
+    "longitude": 63.6313,
+    "photo": ""
+  },
+  {
+    "id": 116,
+    "category": "Бродячие животные",
+    "address": "ул. Кайырбекова, 44",
+    "status": "В работе",
+    "created_at": "2025-10-27",
+    "description": "Агрессивная собака у подъезда",
+    "latitude": 53.2203,
+    "longitude": 63.6250,
+    "photo": ""
+  },
+  {
+    "id": 117,
+    "category": "Озеленение",
+    "address": "ул. Темирбаева, 6",
+    "status": "Решено",
+    "created_at": "2025-10-16",
+    "description": "Посадили новые деревья",
+    "latitude": 53.2133,
+    "longitude": 63.6229,
+    "photo": ""
+  },
+  {
+    "id": 118,
+    "category": "Освещение улиц",
+    "address": "ул. Алтынсарина, 57",
+    "status": "Отклонено",
+    "created_at": "2025-10-11",
+    "description": "Фонарь полностью не работает",
+    "latitude": 53.2222,
+    "longitude": 63.6234,
+    "photo": ""
+  },
+  {
+    "id": 119,
+    "category": "Общественный транспорт",
+    "address": "ул. Уральская, 3",
+    "status": "В работе",
+    "created_at": "2025-11-06",
+    "description": "Маршрутка переполнена каждое утро",
+    "latitude": 53.2174,
+    "longitude": 63.6330,
+    "photo": ""
+  },
+  {
+    "id": 120,
+    "category": "Вывоз мусора",
+    "address": "ул. Кустанайская, 81",
+    "status": "Решено",
+    "created_at": "2025-09-25",
+    "description": "Убрали мусорную свалку",
+    "latitude": 53.2191,
+    "longitude": 63.6202,
+    "photo": ""
+  },
+  {
+    "id": 121,
+    "category": "Дворовые территории",
+    "address": "ул. Баймагамбетова, 14",
+    "status": "В работе",
+    "created_at": "2025-11-07",
+    "description": "Нужна замена качелей",
+    "latitude": 53.2115,
+    "longitude": 63.6287,
+    "photo": ""
+  },
+  {
+    "id": 122,
+    "category": "Дорожное покрытие",
+    "address": "ул. Бородина, 5",
+    "status": "Решено",
+    "created_at": "2025-10-13",
+    "description": "Положили новый асфальт",
+    "latitude": 53.2149,
+    "longitude": 63.6174,
+    "photo": ""
   }
 ]
