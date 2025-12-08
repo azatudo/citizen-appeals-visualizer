@@ -46,6 +46,7 @@ export default function App() {
       });
     }
   }, [selectedId]);
+
   const pageCount = Math.ceil(filteredItems.length / itemsPerPage);
   const paginated = filteredItems.slice(
     (page - 1) * itemsPerPage,
@@ -84,7 +85,13 @@ export default function App() {
         }}
       >
         <Paper sx={{ p: 2 }}>
-          <Filters data={items} onFilter={setFilteredItems} />
+          <Filters
+            data={items}
+            onFilter={(list) => {
+              setFilteredItems(list);
+              setPage(1);
+            }}
+          />
         </Paper>
 
         <TableContainer component={Paper} sx={{ flex: 1, overflowY: "auto" }}>
@@ -94,6 +101,8 @@ export default function App() {
                 <TableCell>ID</TableCell>
                 <TableCell>Категория</TableCell>
                 <TableCell>Адрес</TableCell>
+                <TableCell>Статус</TableCell>
+                <TableCell>Дата регистрации</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -109,8 +118,17 @@ export default function App() {
                   <TableCell>{item.id}</TableCell>
                   <TableCell>{item.category}</TableCell>
                   <TableCell>{item.address}</TableCell>
+                  <TableCell>{item.status}</TableCell>
+                  <TableCell>{new Date(item.created_at).toLocaleDateString("ru-RU")}</TableCell>
                 </TableRow>
               ))}
+              {paginated.length === 0 && (
+                <TableRow>
+                  <TableCell colSpan={5}>
+                    <Typography>Нет данных</Typography>
+                  </TableCell>
+                </TableRow>
+              )}
             </TableBody>
           </Table>
         </TableContainer>
